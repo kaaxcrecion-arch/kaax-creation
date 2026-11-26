@@ -184,11 +184,11 @@
   .post-card {
     background: var(--gris-clair);
     text-decoration: none;
-    transition: transform .3s;
+    transition: transform .3s, box-shadow .3s;
     display: flex;
     flex-direction: column;
   }
-  .post-card:hover { transform: translateY(-4px); }
+  .post-card:hover { transform: translateY(-4px); box-shadow: 0 20px 60px rgba(0,0,0,.4); }
   .post-card-img {
     height: 200px;
     background: linear-gradient(135deg, var(--vert) 0%, #1a2f26 100%);
@@ -395,7 +395,7 @@
 
   <!-- Featured Post -->
   <a href="/blog/cocinas-integrales-playa-del-carmen.html" class="post-featured">
-    <div class="post-featured-img">
+    <div class="post-featured-img" style="background-image:url('/blog/img/cocina-luxe-marbres-ilot.jpg');background-size:cover;background-position:center;">
       <div class="post-featured-badge">Nuevo</div>
     </div>
     <div class="post-featured-content">
@@ -440,85 +440,87 @@
       </div>
     </a>
 
-    <!-- Article 2 — coming soon -->
-    <div class="post-card" style="opacity:.6;cursor:default;">
-      <div class="post-card-img" style="background:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);">
-        <div class="post-card-img-icon">🚪</div>
+    <!-- Article 2 — vestidores -->
+    <a href="/blog/vestidores-a-medida-playa-del-carmen.html" class="post-card">
+      <div class="post-card-img" style="background:linear-gradient(135deg,#1a1a2e 0%,#2D4A3E 100%);padding:0;position:relative;">
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:.18;">
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none"><rect x="8" y="4" width="28" height="72" rx="2" stroke="#C9A84C" stroke-width="2"/><rect x="44" y="4" width="28" height="72" rx="2" stroke="#C9A84C" stroke-width="2"/><line x1="22" y1="4" x2="22" y2="76" stroke="#C9A84C" stroke-width="1"/><line x1="58" y1="4" x2="58" y2="76" stroke="#C9A84C" stroke-width="1"/><circle cx="22" cy="40" r="3" stroke="#C9A84C" stroke-width="1.5"/><circle cx="58" cy="40" r="3" stroke="#C9A84C" stroke-width="1.5"/></svg>
+        </div>
         <div class="post-card-img-label">Vestidores & Closets</div>
       </div>
       <div class="post-card-content">
         <h3>Vestidores a Medida: El Lujo de un Espacio Perfectamente Organizado</h3>
         <p>Cómo diseñar un vestidor que combine funcionalidad, estética y materiales nobles adaptados al clima tropical.</p>
         <div class="post-card-meta">
-          <span>Próximamente</span>
-          <span class="soon-badge">En proceso</span>
+          <span>Nov 2026 · 8 min</span>
+          <span style="color:var(--or)">Leer →</span>
         </div>
       </div>
-    </div>
+    </a>
 
-    <!-- Article 3 — coming soon -->
-    <div class="post-card" style="opacity:.6;cursor:default;">
-      <div class="post-card-img" style="background:linear-gradient(135deg,#1f2b1a 0%,#2d4a3e 100%);">
-        <div class="post-card-img-icon">🌿</div>
+    <!-- Article 3 — maderas -->
+    <a href="/blog/maderas-clima-tropical-riviera-maya.html" class="post-card">
+      <div class="post-card-img" style="padding:0;">
+        <img src="/blog/img/cocina-integrale-villa-tropical.jpg" alt="Cocina integral villa tropical — maderas en clima Riviera Maya" style="width:100%;height:100%;object-fit:cover;display:block;">
         <div class="post-card-img-label">Materiales</div>
       </div>
       <div class="post-card-content">
         <h3>¿Qué Maderas Sobreviven al Clima Tropical de la Riviera Maya?</h3>
         <p>Roble, cedro, nogal, fresno — una guía honesta sobre qué funciona (y qué no) bajo el calor y la humedad del Caribe.</p>
         <div class="post-card-meta">
-          <span>Próximamente</span>
-          <span class="soon-badge">En proceso</span>
+          <span>Nov 2026 · 9 min</span>
+          <span style="color:var(--or)">Leer →</span>
         </div>
       </div>
-    </div>
+    </a>
 
-    <!-- Article 4 — coming soon -->
-    <div class="post-card" style="opacity:.6;cursor:default;">
-      <div class="post-card-img" style="background:linear-gradient(135deg,#2a1f0a 0%,#4a3520 100%);">
-        <div class="post-card-img-icon">🏠</div>
+    <!-- Article 4 — inversión inmobiliaria -->
+    <a href="/blog/muebles-medida-inversion-propiedad-playa-del-carmen.html" class="post-card">
+      <div class="post-card-img" style="padding:0;">
+        <img src="/blog/img/cocina-noire-ilot-marbre.jpg" alt="Cocina negra con îlot de mármol — inversión inmobiliaria Playa del Carmen" style="width:100%;height:100%;object-fit:cover;display:block;">
         <div class="post-card-img-label">Inversión Inmobiliaria</div>
       </div>
       <div class="post-card-content">
-        <h3>Muebles a Medida como Inversión: Cómo la Carpintería Aumenta el Valor de tu Propiedad en PDC</h3>
+        <h3>Muebles a Medida como Inversión: Aumenta el Valor de tu Propiedad en PDC</h3>
         <p>Por qué los compradores de propiedades premium en Playa del Carmen valoran la carpintería de lujo — y cuánto puede aumentar el precio de venta o alquiler.</p>
         <div class="post-card-meta">
-          <span>Próximamente</span>
-          <span class="soon-badge">En proceso</span>
+          <span>Nov 2026 · 7 min</span>
+          <span style="color:var(--or)">Leer →</span>
         </div>
       </div>
-    </div>
+    </a>
 
-    <!-- Article 5 — coming soon -->
-    <div class="post-card" style="opacity:.6;cursor:default;">
-      <div class="post-card-img" style="background:linear-gradient(135deg,#0d1a2a 0%,#1a3040 100%);">
-        <div class="post-card-img-icon">✦</div>
+    <!-- Article 5 — tendencias 2026 -->
+    <a href="/blog/tendencias-2026-cocinas-lujo-riviera-maya.html" class="post-card">
+      <div class="post-card-img" style="padding:0;">
+        <img src="/blog/img/cocina-luxe-marbres-ilot.jpg" alt="Tendencias 2026 cocinas de lujo Riviera Maya" style="width:100%;height:100%;object-fit:cover;display:block;">
         <div class="post-card-img-label">Estilo & Diseño</div>
       </div>
       <div class="post-card-content">
         <h3>Tendencias 2026 en Diseño de Cocinas de Lujo para la Riviera Maya</h3>
         <p>Los estilos que están dominando los condominios y villas premium de Playa del Carmen, Tulum y Cancún este año.</p>
         <div class="post-card-meta">
-          <span>Próximamente</span>
-          <span class="soon-badge">En proceso</span>
+          <span>Nov 2026 · 6 min</span>
+          <span style="color:var(--or)">Leer →</span>
         </div>
       </div>
-    </div>
+    </a>
 
-    <!-- Article 6 — coming soon -->
-    <div class="post-card" style="opacity:.6;cursor:default;">
-      <div class="post-card-img" style="background:linear-gradient(135deg,#1a0d1a 0%,#2d1a2d 100%);">
-        <div class="post-card-img-icon">📐</div>
+    <!-- Article 6 — elegir carpintero -->
+    <a href="/blog/como-elegir-carpintero-playa-del-carmen.html" class="post-card">
+      <div class="post-card-img" style="padding:0;">
+        <img src="/blog/img/cocina-integrale-villa-tropical.jpg" alt="Cómo elegir carpintero Playa del Carmen" style="width:100%;height:100%;object-fit:cover;display:block;">
         <div class="post-card-img-label">Guía Práctica</div>
       </div>
       <div class="post-card-content">
         <h3>Cómo Elegir a tu Carpintero en Playa del Carmen: 7 Preguntas que Debes Hacer</h3>
         <p>Antes de firmar cualquier presupuesto, esto es lo que todo propietario debe preguntar a su futuro carpintero en la Riviera Maya.</p>
         <div class="post-card-meta">
-          <span>Próximamente</span>
-          <span class="soon-badge">En proceso</span>
+          <span>Nov 2026 · 5 min</span>
+          <span style="color:var(--or)">Leer →</span>
         </div>
       </div>
-    </div>
+    </a>
 
   </div><!-- /.posts-grid -->
 </div><!-- /.blog-section -->
@@ -548,8 +550,9 @@
     </div>
     <div class="footer-links">
       <a href="/blog/cocinas-integrales-playa-del-carmen.html">Cocinas Integrales PDC</a>
-      <a href="/#servicios">Vestidores a Medida</a>
-      <a href="/#servicios">Muebles de Madera</a>
+      <a href="/blog/vestidores-a-medida-playa-del-carmen.html">Vestidores a Medida</a>
+      <a href="/blog/maderas-clima-tropical-riviera-maya.html">Maderas Tropicales</a>
+      <a href="/blog/tendencias-2026-cocinas-lujo-riviera-maya.html">Tendencias 2026</a>
     </div>
   </div>
   <div class="footer-bottom">
