@@ -2,8 +2,8 @@ name = "kaax-creation"
 compatibility_date = "2024-11-26"
 
 routes = [
-  { pattern = "kaaxcreacion.com/*", custom_domain = true },
-  { pattern = "www.kaaxcreacion.com/*", custom_domain = true }
+  { pattern = "kaaxcreacion.com", custom_domain = true },
+  { pattern = "www.kaaxcreacion.com", custom_domain = true }
 ]
 
 [assets]
