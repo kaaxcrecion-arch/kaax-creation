@@ -1,0 +1,7 @@
+node_modules/
+.git/
+.github/
+package*.json
+wrangler.toml
+*.lock
+.assetsignore
