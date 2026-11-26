@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Блог — Ka'ax Création | Плая-дель-Кармен</title>
+<meta name="description" content="Руководства, inspiración y consejos sobre carpintería de lujo, cocinas integrales, vestidores a medida y muebles de madera en Playa del Carmen y la Riviera Maya.">
+<link rel="canonical" href="https://kaaxcreacion.com/blog/">
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap');
+
+  :root {
+    --noir: #0D0D0D;
+    --or: #C9A84C;
+    --or-clair: #E8C97A;
+    --creme: #FAF7F0;
+    --vert: #2D4A3E;
+    --gris: #8C8070;
+    --gris-clair: #1A1A1A;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--noir); color: var(--creme); font-family: 'Inter', sans-serif; overflow-x: hidden; }
+
+  /* ═══ TICKER ═══ */
+  .ticker-wrap { background: var(--or); padding: 12px 0; overflow: hidden; width: 100%; z-index: 10; }
+  .ticker-track { display: flex; white-space: nowrap; animation: ticker-scroll 55s linear infinite; }
+  .ticker-item { display: inline-flex; align-items: center; gap: 10px; padding: 0 40px; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--noir); font-weight: 500; flex-shrink: 0; }
+  .ticker-dot { width: 4px; height: 4px; background: var(--noir); border-radius: 50%; opacity: .35; }
+  @keyframes ticker-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+  /* ═══ NAV ═══ */
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 24px 48px; display: flex; justify-content: space-between; align-items: center; background: linear-gradient(to bottom, rgba(13,13,13,.95) 0%, transparent 100%); }
+  .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 300; letter-spacing: 4px; text-transform: uppercase; color: var(--creme); text-decoration: none; }
+  .nav-logo span { color: var(--or); }
+  .nav-links { display: flex; gap: 40px; align-items: center; }
+  .nav-links a { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--gris); text-decoration: none; transition: color .3s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--or); }
+  .nav-cta { background: var(--or); color: var(--noir) !important; padding: 10px 24px; font-weight: 500; }
+
+  /* ═══ BLOG HERO ═══ */
+  .blog-hero {
+    padding: 160px 48px 100px;
+    text-align: center;
+    position: relative;
+    background: linear-gradient(to bottom, rgba(13,13,13,.5) 0%, var(--noir) 100%),
+                url('../images/hero-bg.jpg') center/cover no-repeat;
+  }
+  .blog-hero-label {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--or);
+    margin-bottom: 24px;
+  }
+  .blog-hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(40px, 6vw, 72px);
+    font-weight: 300;
+    color: var(--creme);
+    line-height: 1.1;
+    margin-bottom: 24px;
+  }
+  .blog-hero h1 em { font-style: italic; color: var(--or-clair); }
+  .blog-hero-desc {
+    font-size: 15px;
+    color: rgba(250,247,240,.65);
+    max-width: 540px;
+    margin: 0 auto;
+    line-height: 1.8;
+    letter-spacing: .5px;
+  }
+
+  /* ═══ BLOG GRID ═══ */
+  .blog-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 100px 48px;
+  }
+  .blog-section-label {
+    font-size: 10px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--or);
+    margin-bottom: 48px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .blog-section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(201, 168, 76, .2);
+  }
+
+  /* Featured post */
+  .post-featured {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    background: var(--gris-clair);
+    margin-bottom: 60px;
+    text-decoration: none;
+    transition: transform .3s;
+  }
+  .post-featured:hover { transform: translateY(-4px); }
+  .post-featured-img {
+    min-height: 420px;
+    background: url('../images/hero-bg.jpg') center/cover no-repeat;
+    position: relative;
+  }
+  .post-featured-badge {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    background: var(--or);
+    color: var(--noir);
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    font-weight: 500;
+  }
+  .post-featured-content {
+    padding: 60px 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .post-category {
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--or);
+    margin-bottom: 20px;
+  }
+  .post-featured-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 300;
+    color: var(--creme);
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+  .post-featured-content p {
+    font-size: 14px;
+    color: rgba(250, 247, 240, .65);
+    line-height: 1.8;
+    margin-bottom: 32px;
+  }
+  .post-meta {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gris);
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .read-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--or);
+    margin-top: 32px;
+    font-weight: 500;
+  }
+  .read-more::after { content: '→'; }
+
+  /* Posts grid */
+  .posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+  }
+
+  .post-card {
+    background: var(--gris-clair);
+    text-decoration: none;
+    transition: transform .3s, box-shadow .3s;
+    display: flex;
+    flex-direction: column;
+  }
+  .post-card:hover { transform: translateY(-4px); box-shadow: 0 20px 60px rgba(0,0,0,.4); }
+  .post-card-img {
+    height: 200px;
+    background: linear-gradient(135deg, var(--vert) 0%, #1a2f26 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    position: relative;
+    overflow: hidden;
+  }
+  .post-card-img-icon {
+    font-size: 48px;
+    opacity: .3;
+  }
+  .post-card-img-label {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--or);
+    background: rgba(13,13,13,.7);
+    padding: 4px 10px;
+  }
+  .post-card-content { padding: 32px 28px; flex: 1; display: flex; flex-direction: column; }
+  .post-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 300;
+    color: var(--creme);
+    line-height: 1.3;
+    margin-bottom: 12px;
+  }
+  .post-card p {
+    font-size: 13px;
+    line-height: 1.7;
+    color: rgba(250, 247, 240, .6);
+    margin-bottom: 24px;
+    flex: 1;
+  }
+  .post-card-meta {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gris);
+    padding-top: 16px;
+    border-top: 1px solid rgba(255,255,255,.06);
+    display: flex;
+    justify-content: space-between;
+  }
+  .soon-badge {
+    display: inline-block;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gris);
+    border: 1px solid rgba(140,128,112,.3);
+    padding: 3px 8px;
+  }
+
+  /* ═══ TOPICS FILTER ═══ */
+  .topics-bar {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+  }
+  .topic-btn {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gris);
+    border: 1px solid rgba(140,128,112,.3);
+    padding: 8px 20px;
+    cursor: pointer;
+    transition: all .3s;
+    background: none;
+  }
+  .topic-btn.active, .topic-btn:hover {
+    border-color: var(--or);
+    color: var(--or);
+  }
+
+  /* ═══ NEWSLETTER ═══ */
+  .newsletter-band {
+    background: var(--vert);
+    padding: 80px 48px;
+    text-align: center;
+  }
+  .newsletter-band h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 300;
+    color: var(--creme);
+    margin-bottom: 12px;
+  }
+  .newsletter-band p {
+    font-size: 14px;
+    color: rgba(250, 247, 240, .65);
+    max-width: 400px;
+    margin: 0 auto 32px;
+    line-height: 1.7;
+  }
+  .newsletter-form {
+    display: flex;
+    gap: 0;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+  .newsletter-form input {
+    flex: 1;
+    padding: 14px 20px;
+    background: rgba(0,0,0,.3);
+    border: 1px solid rgba(201, 168, 76, .3);
+    border-right: none;
+    color: var(--creme);
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    outline: none;
+  }
+  .newsletter-form input::placeholder { color: rgba(250,247,240,.35); }
+  .newsletter-form button {
+    padding: 14px 24px;
+    background: var(--or);
+    color: var(--noir);
+    border: none;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    transition: background .3s;
+  }
+  .newsletter-form button:hover { background: var(--or-clair); }
+
+  /* ═══ FOOTER ═══ */
+  footer { background: #080808; padding: 60px 48px 40px; }
+  .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: start; gap: 48px; flex-wrap: wrap; }
+  .footer-brand { font-family: 'Cormorant Garamond', serif; font-size: 22px; letter-spacing: 4px; text-transform: uppercase; color: var(--creme); font-weight: 300; }
+  .footer-brand span { color: var(--or); }
+  .footer-tagline { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--gris); margin-top: 8px; }
+  .footer-links a { display: block; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--gris); text-decoration: none; margin-bottom: 12px; transition: color .3s; }
+  .footer-links a:hover { color: var(--or); }
+  .footer-bottom { max-width: 1200px; margin: 48px auto 0; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.06); font-size: 11px; color: rgba(140,128,112,.5); letter-spacing: 1px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+
+  @media(max-width: 900px) {
+    .post-featured { grid-template-columns: 1fr; }
+    .post-featured-img { min-height: 280px; }
+  }
+  @media(max-width: 768px) {
+    nav { padding: 20px 24px; }
+    .nav-links { display: none; }
+    .blog-hero { padding: 120px 24px 80px; }
+    .blog-section { padding: 60px 24px; }
+    .newsletter-band { padding: 60px 24px; }
+    .newsletter-form { flex-direction: column; }
+    .newsletter-form input { border-right: 1px solid rgba(201, 168, 76, .3); border-bottom: none; }
+    footer { padding: 48px 24px 32px; }
+  }
+</style>
+
+  <link rel="alternate" hreflang="x-default" href="https://kaaxcreacion.com/blog/">
+  <link rel="alternate" hreflang="es" href="https://kaaxcreacion.com/blog/">
+  <link rel="alternate" hreflang="fr" href="https://kaaxcreacion.com/fr/blog/">
+  <link rel="alternate" hreflang="en" href="https://kaaxcreacion.com/en/blog/">
+  <link rel="alternate" hreflang="it" href="https://kaaxcreacion.com/it/blog/">
+  <link rel="alternate" hreflang="de" href="https://kaaxcreacion.com/de/blog/">
+  <link rel="alternate" hreflang="ru" href="https://kaaxcreacion.com/ru/blog/">
+  <link rel="alternate" hreflang="pt" href="https://kaaxcreacion.com/pt/blog/">
+</head>
+<body>
+
+<!-- Ticker -->
+<div class="ticker-wrap">
+  <div class="ticker-track">
+    <span class="ticker-item">Cocinas integrales a medida <span class="ticker-dot"></span></span>
+    <span class="ticker-item">Vestidores de madera maciza <span class="ticker-dot"></span></span>
+    <span class="ticker-item">Artesanos europeos en Playa del Carmen <span class="ticker-dot"></span></span>
+    <span class="ticker-item">Muebles a medida · Riviera Maya <span class="ticker-dot"></span></span>
+    <span class="ticker-item">Presupuesto gratuito sin compromiso <span class="ticker-dot"></span></span>
+    <span class="ticker-item">Cocinas integrales a medida <span class="ticker-dot"></span></span>
+    <span class="ticker-item">Vestidores de madera maciza <span class="ticker-dot"></span></span>
+    <span class="ticker-item">Artesanos europeos en Playa del Carmen <span class="ticker-dot"></span></span>
+    <span class="ticker-item">Muebles a medida · Riviera Maya <span class="ticker-dot"></span></span>
+    <span class="ticker-item">Presupuesto gratuito sin compromiso <span class="ticker-dot"></span></span>
+  </div>
+</div>
+
+<!-- Nav -->
+<nav>
+  <a href="https://kaaxcreacion.com/" class="nav-logo">Ka'<span>ax</span> Creación</a>
+  <div class="nav-links">
+    <a href="/#servicios">Servicios</a>
+    <a href="/#proceso">Proceso</a>
+    <a href="https://kaaxcreacion.com/blog/" class="active">Блог</a>
+    <a href="/#contacto" class="nav-cta">Presupuesto Gratuito</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<div class="blog-hero">
+  <div class="blog-hero-label">Inspiración · Руководства · Consejos</div>
+  <h1>El Блог de <em>Ka'ax Creación</em></h1>
+  <p class="blog-hero-desc">Todo sobre carpintería de lujo, diseño de interiores y la arte de crear espacios únicos en la Riviera Maya.</p>
+</div>
+
+<!-- Блог Content -->
+<div class="blog-section">
+
+  <div class="blog-section-label">Artículo destacado</div>
+
+  <!-- Featured Post -->
+  <a href="https://kaaxcreacion.com/blog/cocinas-integrales-playa-del-carmen.html" class="post-featured">
+    <div class="post-featured-img" style="background-image:url('/blog/img/cocina-luxe-marbres-ilot.jpg');background-size:cover;background-position:center;">
+      <div class="post-featured-badge">Nuevo</div>
+    </div>
+    <div class="post-featured-content">
+      <div class="post-category">Cocinas Integrales · Playa del Carmen</div>
+      <h2>Cocinas Integrales a Medida en Playa del Carmen: La Elegancia Europea en tu Hogar</h2>
+      <p>¿Por qué cada vez más propietarios de la Riviera Maya eligen la carpintería europea para sus cocinas? Descubre estilos, materiales, proceso y todo lo que necesitas saber antes de invertir.</p>
+      <div class="post-meta">
+        <span>Noviembre 2026</span>
+        <span>7 min de lectura</span>
+      </div>
+      <span class="read-more">Leer el artículo</span>
+    </div>
+  </a>
+
+  <!-- Topics -->
+  <div class="blog-section-label">Todos los temas</div>
+  <div class="topics-bar">
+    <button class="topic-btn active">Todo</button>
+    <button class="topic-btn">Cocinas Integrales</button>
+    <button class="topic-btn">Vestidores & Closets</button>
+    <button class="topic-btn">Muebles de Madera</button>
+    <button class="topic-btn">Diseño de Interiores</button>
+    <button class="topic-btn">Riviera Maya</button>
+  </div>
+
+  <!-- Posts Grid -->
+  <div class="posts-grid">
+
+    <!-- Article 1 — published -->
+    <a href="https://kaaxcreacion.com/blog/cocinas-integrales-playa-del-carmen.html" class="post-card">
+      <div class="post-card-img" style="padding:0;">
+        <img src="https://kaaxcreacion.com/blog/img/cocina-luxe-marbres-ilot.jpg" alt="Cocina integral de lujo con îlot en mármol — Ka'ax Création Playa del Carmen" style="width:100%;height:100%;object-fit:cover;display:block;">
+        <div class="post-card-img-label">Cocinas Integrales</div>
+      </div>
+      <div class="post-card-content">
+        <h3>Cocinas Integrales a Medida en Playa del Carmen</h3>
+        <p>Estilos, maderas, proceso y qué considerar antes de encargar tu cocina europea en la Riviera Maya.</p>
+        <div class="post-card-meta">
+          <span>Nov 2026 · 7 min</span>
+          <span style="color:var(--or)">Читать →</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Article 2 — vestidores -->
+    <a href="https://kaaxcreacion.com/blog/vestidores-a-medida-playa-del-carmen.html" class="post-card">
+      <div class="post-card-img" style="padding:0;">
+        <img src="https://kaaxcreacion.com/blog/img/cocina-noire-ilot-marbre.jpg" alt="Vestidor a medida de madera oscura — Ka'ax Creación Playa del Carmen" style="width:100%;height:100%;object-fit:cover;display:block;">
+        <div class="post-card-img-label">Vestidores & Closets</div>
+      </div>
+      <div class="post-card-content">
+        <h3>Гардеробные на Заказ: Роскошь Идеально Организованного Пространства</h3>
+        <p>Cómo diseñar un vestidor que combine funcionalidad, estética y materiales nobles adaptados al clima tropical.</p>
+        <div class="post-card-meta">
+          <span>Nov 2026 · 8 min</span>
+          <span style="color:var(--or)">Читать →</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Article 3 — maderas -->
+    <a href="https://kaaxcreacion.com/blog/maderas-clima-tropical-riviera-maya.html" class="post-card">
+      <div class="post-card-img" style="padding:0;">
+        <img src="https://kaaxcreacion.com/blog/img/cocina-integrale-villa-tropical.jpg" alt="Cocina integral villa tropical — maderas en clima Riviera Maya" style="width:100%;height:100%;object-fit:cover;display:block;">
+        <div class="post-card-img-label">Материалы</div>
+      </div>
+      <div class="post-card-content">
+        <h3>¿Qué Maderas Sobreviven al Clima Tropical de la Riviera Maya?</h3>
+        <p>Roble, cedro, nogal, fresno — una guía honesta sobre qué funciona (y qué no) bajo el calor y la humedad del Caribe.</p>
+        <div class="post-card-meta">
+          <span>Nov 2026 · 9 min</span>
+          <span style="color:var(--or)">Читать →</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Article 4 — inversión inmobiliaria -->
+    <a href="https://kaaxcreacion.com/blog/muebles-medida-inversion-propiedad-playa-del-carmen.html" class="post-card">
+      <div class="post-card-img" style="padding:0;">
+        <img src="https://kaaxcreacion.com/blog/img/cocina-noire-ilot-marbre.jpg" alt="Cocina negra con îlot de mármol — inversión inmobiliaria Playa del Carmen" style="width:100%;height:100%;object-fit:cover;display:block;">
+        <div class="post-card-img-label">Инвестиции Inmobiliaria</div>
+      </div>
+      <div class="post-card-content">
+        <h3>Мебель на Заказ как Инвестиция: Увеличьте Стоимость Вашей Недвижимости en PDC</h3>
+        <p>Por qué los compradores de propiedades premium en Playa del Carmen valoran la carpintería de lujo — y cuánto puede aumentar el precio de venta o alquiler.</p>
+        <div class="post-card-meta">
+          <span>Nov 2026 · 7 min</span>
+          <span style="color:var(--or)">Читать →</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Article 5 — tendencias 2026 -->
+    <a href="https://kaaxcreacion.com/blog/tendencias-2026-cocinas-lujo-riviera-maya.html" class="post-card">
+      <div class="post-card-img" style="padding:0;">
+        <img src="https://kaaxcreacion.com/blog/img/cocina-luxe-marbres-ilot.jpg" alt="Тренды 2026 cocinas de lujo Riviera Maya" style="width:100%;height:100%;object-fit:cover;display:block;">
+        <div class="post-card-img-label">Estilo & Diseño</div>
+      </div>
+      <div class="post-card-content">
+        <h3>Тренды 2026 en Diseño de Cocinas de Lujo para la Riviera Maya</h3>
+        <p>Los estilos que están dominando los condominios y villas premium de Playa del Carmen, Tulum y Cancún este año.</p>
+        <div class="post-card-meta">
+          <span>Nov 2026 · 6 min</span>
+          <span style="color:var(--or)">Читать →</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Article 6 — elegir carpintero -->
+    <a href="https://kaaxcreacion.com/blog/como-elegir-carpintero-playa-del-carmen.html" class="post-card">
+      <div class="post-card-img" style="padding:0;">
+        <img src="https://kaaxcreacion.com/blog/img/cocina-integrale-villa-tropical.jpg" alt="Cómo elegir carpintero Playa del Carmen" style="width:100%;height:100%;object-fit:cover;display:block;">
+        <div class="post-card-img-label">Guía Práctica</div>
+      </div>
+      <div class="post-card-content">
+        <h3>Cómo Elegir a tu Carpintero en Playa del Carmen: 7 Preguntas que Debes Hacer</h3>
+        <p>Antes de firmar cualquier presupuesto, esto es lo que todo propietario debe preguntar a su futuro carpintero en la Riviera Maya.</p>
+        <div class="post-card-meta">
+          <span>Nov 2026 · 5 min</span>
+          <span style="color:var(--or)">Читать →</span>
+        </div>
+      </div>
+    </a>
+
+  </div><!-- /.posts-grid -->
+</div><!-- /.blog-section -->
+
+<!-- Newsletter -->
+<div class="newsletter-band">
+  <h2>Inspiración mensual en tu bandeja</h2>
+  <p>Proyectos, tendencias y consejos exclusivos de nuestros artesanos europeos. Sin spam, solo carpintería de lujo.</p>
+  <form class="newsletter-form" onsubmit="return false;">
+    <input type="email" placeholder="tu@email.com">
+    <button type="submit">Suscribirse</button>
+  </form>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">Ka'<span>ax</span> Creación</div>
+      <div class="footer-tagline">Carpintería europea · Playa del Carmen</div>
+    </div>
+    <div class="footer-links">
+      <a href="https://kaaxcreacion.com/">Главная</a>
+      <a href="/#servicios">Servicios</a>
+      <a href="https://kaaxcreacion.com/blog/">Блог</a>
+      <a href="/#contacto">Контакт</a>
+    </div>
+    <div class="footer-links">
+      <a href="https://kaaxcreacion.com/blog/cocinas-integrales-playa-del-carmen.html">Cocinas Integrales PDC</a>
+      <a href="https://kaaxcreacion.com/blog/vestidores-a-medida-playa-del-carmen.html">Vestidores a Medida</a>
+      <a href="https://kaaxcreacion.com/blog/maderas-clima-tropical-riviera-maya.html">Maderas Tropicales</a>
+      <a href="https://kaaxcreacion.com/blog/tendencias-2026-cocinas-lujo-riviera-maya.html">Тренды 2026</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Ka'ax Creación — Playa del Carmen, Quintana Roo</span>
+    <span>Carpintería fina · Riviera Maya</span>
+  </div>
+</footer>
+
+</body>
+</html>
