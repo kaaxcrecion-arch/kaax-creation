@@ -47,7 +47,7 @@
   .nav-logo span{color:var(--or)}.nav-links{display:flex;gap:40px;align-items:center}
   .nav-links a{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gris);text-decoration:none;transition:color .3s}
   .nav-links a:hover{color:var(--or)}.nav-cta{background:var(--or);color:var(--noir)!important;padding:10px 24px;font-weight:500}
-  .article-hero{padding:160px 0 80px;background:linear-gradient(to bottom,rgba(13,13,13,.7) 0%,var(--noir) 100%),url('../images/hero-bg.jpg') center/cover no-repeat;text-align:center}
+  .article-hero{padding:160px 0 80px;background:linear-gradient(to bottom,rgba(13,13,13,.7) 0%,var(--noir) 100%),url('img/cocina-noire-ilot-marbre.jpg') center/cover no-repeat;text-align:center}
   .article-category{display:inline-block;font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--or);border:1px solid var(--or);padding:6px 16px;margin-bottom:32px}
   .article-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,5vw,60px);font-weight:300;line-height:1.1;max-width:860px;margin:0 auto 24px;color:var(--creme)}
   .article-hero h1 em{font-style:italic;color:var(--or-clair)}
@@ -104,6 +104,12 @@
   .footer-links a:hover{color:var(--or)}
   .footer-bottom{max-width:1200px;margin:48px auto 0;padding-top:24px;border-top:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--gris);flex-wrap:wrap;gap:12px}
   @media(max-width:768px){nav{padding:20px 24px}.nav-links{gap:20px}.article-container{padding:60px 20px}.roi-card{grid-template-columns:1fr}}
+
+  .article-photo{width:100%;margin:40px 0;border-radius:2px;overflow:hidden}
+  .article-photo img{width:100%;height:460px;object-fit:cover;display:block}
+  .article-photo figcaption{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gris);padding:10px 0 0;text-align:center}
+  @media(max-width:768px){.article-photo img{height:260px}}
+
 </style>
 </head>
 <body>
@@ -162,7 +168,13 @@
     <p>Playa del Carmen y la Riviera Maya se han convertido en uno de los mercados inmobiliarios más dinámicos de América Latina. La demanda de propiedades de alquiler —tanto vacacional en Airbnb como de larga estancia para expatriados y nómadas digitales— ha generado una fuerte diferenciación de precios basada en la calidad de los acabados.</p>
     <p>Los compradores e inquilinos internacionales, acostumbrados a estándares europeos o norteamericanos, comparan directamente el nivel de equipamiento. Una cocina de catálogo genérica no compite con una cocina integral a medida en la mente —y en el bolsillo— del inquilino objetivo.</p>
 
-    <div class="highlight-box">
+    
+  <figure class="article-photo">
+    <img src="img/cocina-luxe-marbres-ilot.jpg" alt="Cocina de lujo a medida con îlot de mármol — inversión inmobiliaria Playa del Carmen" loading="lazy">
+    <figcaption>Cocina integral con îlot central — +20–35% de renta mensual en propiedades premium · Ka'ax Creación PDC</figcaption>
+  </figure>
+
+  <div class="highlight-box">
       <p>"Uno de nuestros clientes invirtió 95,000 MXN en una cocina integral completa para su departamento en Playa del Carmen. Tres meses después, el alquiler mensual pasó de 1,800 USD a 2,600 USD. El ROI de la cocina fue de 10 meses."</p>
       <cite>— Raphaël, Ka'ax Creación — Playa del Carmen</cite>
     </div>
@@ -257,7 +269,13 @@
     <h3>El perfil nómada digital: una oportunidad para el home office a medida</h3>
     <p>Un segmento en crecimiento en Playa del Carmen y Tulum es el nómada digital: trabajadores remotos que se instalan durante 1 a 6 meses y pagan precios de media estancia. Este perfil valora especialmente la presencia de un escritorio bien iluminado, un mueble de home office funcional y una conexión a internet fiable. Un escritorio a medida bien integrado en la decoración puede diferenciar tu propiedad en este nicho creciente.</p>
 
-    <div class="cta-banner">
+    
+  <figure class="article-photo">
+    <img src="img/cocina-integrale-villa-tropical.jpg" alt="Villa tropical con cocina integral a medida — Riviera Maya Ka'ax Creación" loading="lazy">
+    <figcaption>Villa tropical con cocina integral completa — instalación e inversión coordinada · Riviera Maya</figcaption>
+  </figure>
+
+  <div class="cta-banner">
       <h3>¿Tienes una propiedad en la Riviera Maya que quieres optimizar?</h3>
       <p>Calculamos contigo el ROI real de una cocina integral o vestidor a medida antes de empezar</p>
       <a href="https://wa.me/529840000000?text=Hola,%20quiero%20calcular%20el%20ROI%20de%20muebles%20a%20medida%20para%20mi%20propiedad" class="btn-or" target="_blank" rel="noopener">Hablar con un artesano</a>
