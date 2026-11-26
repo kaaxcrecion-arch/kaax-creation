@@ -366,6 +366,44 @@
     text-align: center;
   }
 
+  /* ═══ PHOTOS ═══ */
+  .article-photo {
+    width: 100%;
+    margin: 40px 0;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .article-photo img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    display: block;
+  }
+  .article-photo figcaption {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--gris);
+    padding: 10px 0 0;
+    text-align: center;
+  }
+  .photo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 40px 0;
+  }
+  .photo-grid img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+  }
+  @media (max-width: 600px) {
+    .photo-grid { grid-template-columns: 1fr; }
+    .article-photo img { height: 260px; }
+  }
+
   /* ═══ ARTICLE CTA FINAL ═══ */
   .final-cta {
     background: var(--gris-clair);
@@ -503,6 +541,11 @@
     En la Riviera Maya, donde el estilo de vida tropical se fusiona con las exigencias del diseño moderno, una cocina integral no es simplemente un mueble — es el corazón de tu hogar. Te contamos por qué cada vez más residentes y propietarios de Playa del Carmen eligen la carpintería europea para transformar sus cocinas en espacios únicos.
   </p>
 
+  <figure class="article-photo">
+    <img src="img/cocina-luxe-marbres-ilot.jpg" alt="Cocina integral de lujo con isla de mármol — realización Ka'ax Création en Playa del Carmen" loading="lazy">
+    <figcaption>Realización Ka'ax Création — Cocina con isla de mármol y muebles negros lacados · Playa del Carmen</figcaption>
+  </figure>
+
   <div class="article-body">
 
     <h2>¿Qué es una Cocina Integral a Medida?</h2>
@@ -566,6 +609,11 @@
       <cite>— Raphaël, Maestro Carpintero · Ka'ax Creación</cite>
     </div>
 
+  <figure class="article-photo">
+    <img src="img/cocina-integrale-villa-tropical.jpg" alt="Cocina integrale con isla de mármol en villa tropical — Ka'ax Création Riviera Maya" loading="lazy">
+    <figcaption>Realización Ka'ax Création — Cocina abierta con isla y vista jardín tropical · Riviera Maya</figcaption>
+  </figure>
+
     <h2>Estilos de Cocinas Integrales más Solicitados en la Riviera Maya</h2>
 
     <p>Después de trabajar con propietarios de condominios, villas y boutique-hotels en Playa del Carmen, Tulum y Puerto Morelos, hemos identificado los estilos que mejor funcionan en el contexto arquitectónico de la Riviera Maya:</p>
@@ -614,6 +662,11 @@
         <p class="step-desc">Instalación precisa y cuidadosa por nuestro equipo. Entrega llaveenAmano con revisión final conjunta.</p>
       </div>
     </div>
+
+  <figure class="article-photo">
+    <img src="img/cocina-noire-ilot-marbre.jpg" alt="Cocina negra con isla de mármol negro — Ka'ax Création Playa del Carmen" loading="lazy">
+    <figcaption>Realización Ka'ax Création — Cocina industrial de lujo, isla en mármol negro Marquina · Playa del Carmen</figcaption>
+  </figure>
 
     <h2>Maderas que Usamos: Calidad Europea para el Clima del Caribe</h2>
 
