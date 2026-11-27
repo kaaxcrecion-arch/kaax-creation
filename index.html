@@ -49,10 +49,9 @@
   .lang-select-btn.open .chevron{transform:rotate(180deg)}
   .lang-dropdown{position:absolute;top:calc(100% + 6px);right:0;background:#111;border:1px solid rgba(201,168,76,.25);min-width:180px;display:none;z-index:200;box-shadow:0 8px 32px rgba(0,0,0,.5)}
   .lang-dropdown.open{display:block}
-  .lang-dropdown-item{display:flex;align-items:center;gap:10px;padding:11px 16px;font-size:12px;letter-spacing:1px}
-  .lang-dropdown-item.active-lang{cursor:pointer;transition:background .2s}
-  .lang-dropdown-item.active-lang:hover{background:rgba(201,168,76,.1)}
-  .lang-dropdown-item.soon{opacity:.35;cursor:default}
+  .lang-dropdown-item{display:flex;align-items:center;gap:10px;padding:11px 16px;font-size:12px;letter-spacing:1px;color:var(--creme);cursor:pointer;transition:background .2s}
+  .lang-dropdown-item.active-lang{color:var(--or)!important;font-weight:600}
+  .lang-dropdown-item:hover{background:rgba(201,168,76,.1);color:var(--or)!important}
   .lang-dropdown-item .flag{font-size:16px}
   .lang-dropdown-item .name{opacity:.8}
   .lang-dropdown-item .badge{margin-left:auto;font-size:9px;color:var(--or);opacity:.7;letter-spacing:1px;text-transform:uppercase}
@@ -92,7 +91,7 @@
   .sf-body{font-size:15px;line-height:1.9;opacity:.72;margin-bottom:32px}
   .sf-quote{border-left:2px solid var(--or);padding:16px 24px;margin-bottom:32px;font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;opacity:.8;line-height:1.6}
   .compagnons-badge{display:inline-flex;align-items:center;gap:16px;border:1px solid rgba(201,168,76,.4);padding:16px 24px;margin-bottom:40px;background:rgba(201,168,76,.04)}
-  .badge-icon{font-size:28px}
+  .badge-icon{font-size:44px}
   .badge-text .badge-title{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--or);margin-bottom:4px}
   .badge-text .badge-sub{font-size:12px;opacity:.6}
   .badge-text .badge-year{font-size:11px;color:var(--or-clair);opacity:.8;margin-top:4px}
@@ -204,6 +203,8 @@
   @media(max-width:768px){
     nav{padding:14px 20px}
     .nav-links{display:none}
+    .nav-cta{display:none}
+    .lang-select-wrap{display:none}
     .stats{grid-template-columns:repeat(2,1fr);padding:40px 20px}
     .stat:nth-child(2){border-right:none}
     .stat:nth-child(3){border-right:1px solid rgba(201,168,76,.15)}
@@ -347,7 +348,7 @@
           "name": "¿Ka'ax Création trabaja en Cancún, Tulum y Mérida?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí. Ka'ax Création tiene su taller en Playa del Carmen y cubre toda la Riviera Maya: Cancún, Tulum, Puerto Morelos, Puerto Aventuras y Playa del Carmen. También realiza proyectos en Mérida. El desplazamiento y la instalación están incluidos en el presupuesto."
+            "text": "Sí. Ka'ax Création tiene su taller en Playa del Carmen y cubre toda la Riviera Maya: Cancún, Tulum, Puerto Morelos, Puerto Aventuras y Playa del Carmen. También realiza proyectos selectivos en Mérida, Izamal, Valladolid, Tizimín y Campeche. El desplazamiento y la instalación están incluidos en el presupuesto."
           }
         },
         {
@@ -411,39 +412,22 @@
     <li><a href="#adn">Nuestro ADN</a></li>
     <li><a href="blog/">Blog</a></li>
   </ul>
-  <div style="display:flex;align-items:center;gap:16px">
+  <div style="display:flex;align-items:center;gap:12px">
     <div class="lang-select-wrap">
-      <button class="lang-select-btn" id="langBtn" aria-label="Idioma actual: Español" aria-expanded="false" aria-haspopup="listbox">
+      <button class="lang-select-btn" onclick="this.nextElementSibling.classList.toggle('open');this.classList.toggle('open')" aria-label="Seleccionar idioma">
         <span class="flag" aria-hidden="true">🇲🇽</span>
         <span class="lang-code">ES</span>
         <span class="chevron" aria-hidden="true">▼</span>
       </button>
-      <div class="lang-dropdown" id="langDropdown" role="listbox">
-        <div class="lang-dropdown-item active-lang" data-flag="🇲🇽" data-code="ES" role="option" aria-selected="true">
-          <span class="flag" aria-hidden="true">🇲🇽</span><span class="name">Español</span><span class="badge">Principal</span>
-        </div>
+      <div class="lang-dropdown">
+        <a href="/" class="lang-dropdown-item active-lang" style="text-decoration:none"><span class="flag">🇲🇽</span><span class="name">Español</span></a>
         <div class="lang-dropdown-divider"></div>
-        <div class="lang-soon-label">Próximamente</div>
-        <div class="lang-dropdown-item soon" role="option" aria-disabled="true">
-          <span class="flag" aria-hidden="true">🇺🇸</span><span class="name">English</span><span class="badge">En proceso</span>
-        </div>
-        <div class="lang-dropdown-item soon" role="option" aria-disabled="true">
-          <span class="flag" aria-hidden="true">🇫🇷</span><span class="name">Français</span><span class="badge">En proceso</span>
-        </div>
-        <div class="lang-dropdown-divider"></div>
-        <div class="lang-dropdown-item soon" role="option" aria-disabled="true">
-          <span class="flag" aria-hidden="true">🇮🇹</span><span class="name">Italiano</span><span class="badge">Próximamente</span>
-        </div>
-        <div class="lang-dropdown-item soon" role="option" aria-disabled="true">
-          <span class="flag" aria-hidden="true">🇩🇪</span><span class="name">Deutsch</span><span class="badge">Próximamente</span>
-        </div>
-        <div class="lang-dropdown-divider"></div>
-        <div class="lang-dropdown-item soon" role="option" aria-disabled="true">
-          <span class="flag" aria-hidden="true">🇷🇺</span><span class="name">Русский</span><span class="badge">Próximamente</span>
-        </div>
-        <div class="lang-dropdown-item soon" role="option" aria-disabled="true">
-          <span class="flag" aria-hidden="true">🇵🇹</span><span class="name">Português</span><span class="badge">Próximamente</span>
-        </div>
+        <a href="/en/" class="lang-dropdown-item" style="text-decoration:none"><span class="flag">🇺🇸</span><span class="name">English</span></a>
+        <a href="/fr/" class="lang-dropdown-item" style="text-decoration:none"><span class="flag">🇫🇷</span><span class="name">Français</span></a>
+        <a href="/it/" class="lang-dropdown-item" style="text-decoration:none"><span class="flag">🇮🇹</span><span class="name">Italiano</span></a>
+        <a href="/de/" class="lang-dropdown-item" style="text-decoration:none"><span class="flag">🇩🇪</span><span class="name">Deutsch</span></a>
+        <a href="/ru/" class="lang-dropdown-item" style="text-decoration:none"><span class="flag">🇷🇺</span><span class="name">Русский</span></a>
+        <a href="/pt/" class="lang-dropdown-item" style="text-decoration:none"><span class="flag">🇵🇹</span><span class="name">Português</span></a>
       </div>
     </div>
     <a href="https://wa.me/529843121942?text=Hola%20Ka%27ax%20Creaci%C3%B3n%2C%20me%20gustar%C3%ADa%20un%20presupuesto%20gratuito." target="_blank" rel="noopener" class="nav-cta">Presupuesto gratuito</a>
@@ -519,7 +503,7 @@
         <div class="badge-text">
           <div class="badge-title">Compagnons du Tour de France</div>
           <div class="badge-sub">La formación compagnonnique más prestigiosa de Europa</div>
-          <div class="badge-year">✦ Major de promoción 2023 &nbsp;🇫🇷</div>
+          <div class="badge-year" style="font-size:14px">✦ Major de promoción 2023 &nbsp;<span style="font-size:20px">🇫🇷</span></div>
         </div>
       </div>
       <a href="#visualize" class="btn-primary">Solicitar un presupuesto</a>
@@ -527,7 +511,7 @@
     <div class="sf-image reveal">
       <img src="images/adn-detail.jpg" alt="Detalle de closet artesanal con tiradores en latón — Ka'ax Creación, Playa del Carmen" loading="lazy" width="600" height="520">
       <div class="kaax-meaning">
-        <p><strong>Ka'ax</strong> signifie « forêt · bois » en langue maya — la matière première, l'essence même de notre métier, ancrée dans cette terre.</p>
+        <p><strong>Ka'ax</strong> significa «bosque · madera» en lengua maya — la materia prima, la esencia misma de nuestro oficio, arraigada en esta tierra.</p>
       </div>
     </div>
   </div>
@@ -712,7 +696,7 @@
           <span style="color:#c9a84c;font-size:24px;font-weight:300;margin-left:16px">+</span>
         </summary>
         <p style="color:rgba(245,240,235,0.65);line-height:1.8;font-size:15px;margin-top:16px;margin-bottom:0">
-          Sí. Nuestro taller está en Playa del Carmen y cubrimos toda la Riviera Maya: <strong style="color:#c9a84c">Cancún, Tulum, Puerto Morelos, Puerto Aventuras y Playa del Carmen</strong>. También realizamos proyectos en Mérida. El desplazamiento y la instalación están incluidos en el presupuesto.
+          Sí. Nuestro taller está en Playa del Carmen y cubrimos toda la Riviera Maya: <strong style="color:#c9a84c">Cancún, Tulum, Puerto Morelos, Puerto Aventuras y Playa del Carmen</strong>. También realizamos proyectos selectivos en la Península de Yucatán: <strong style="color:#c9a84c">Mérida, Izamal, Valladolid, Tizimín y Campeche</strong>. El desplazamiento y la instalación están incluidos en el presupuesto.
         </p>
       </details>
 
@@ -732,7 +716,7 @@
           <span style="color:#c9a84c;font-size:24px;font-weight:300;margin-left:16px">+</span>
         </summary>
         <p style="color:rgba(245,240,235,0.65);line-height:1.8;font-size:15px;margin-top:16px;margin-bottom:0">
-          Son <strong style="color:#c9a84c">compartimentos ocultos</strong> diseñados e integrados de forma invisible en la carpintería: dentro de cajones de cocina, paneles de closet, cabeceras de cama. Sirven para guardar relojes, joyas, documentos o efectivo. Invisibles a simple vista, se activan con mecanismos discretos. Ka'ax Création es uno de los pocos talleres en México que ofrece este servicio integrado en muebles de alta gama.
+          Los <strong style="color:#c9a84c">espacios de discreción</strong> son compartimentos secretos integrados de forma invisible directamente en la carpintería a medida: fondos dobles en cajones de cocina, paneles corredizos en closets, espacios ocultos en cabeceras o muebles de sala. <br><br>Se activan mediante mecanismos magnéticos o por presión, sin ninguna cerradura visible. Perfectos para guardar relojes de lujo, joyas, documentos importantes, efectivo o cualquier objeto de valor. <br><br><strong style="color:#c9a84c">Ka'ax Création es uno de los únicos talleres en México</strong> que ofrece este servicio integrado directamente en la fabricación del mueble, sin añadidos externos. Se planifica desde el diseño inicial y no aparece en ningún plano ni presupuesto estándar — solo bajo petición expresa del cliente.
         </p>
       </details>
 
@@ -742,7 +726,7 @@
           <span style="color:#c9a84c;font-size:24px;font-weight:300;margin-left:16px">+</span>
         </summary>
         <p style="color:rgba(245,240,235,0.65);line-height:1.8;font-size:15px;margin-top:16px;margin-bottom:0">
-          Seleccionamos maderas adaptadas al <strong style="color:#c9a84c">clima tropical húmedo de la Riviera Maya</strong>: tzalam, cedro rojo mexicano, roble europeo tratado, teca y nogal. Se complementan con tableros de alta densidad lacados o enchapados. Todas las piezas están tratadas contra la humedad y los cambios de temperatura del Caribe mexicano.
+          Trabajamos principalmente con <strong style="color:#c9a84c">tableros melamínicos de alta densidad</strong> (melanina de calidad europea), combinados con perfiles de aluminio, lacados y chapas de madera natural según el proyecto. Para estructuras específicas utilizamos maderas macizas seleccionadas. Todos los materiales están adaptados al clima tropical húmedo de la Riviera Maya.
         </p>
       </details>
 
@@ -915,7 +899,7 @@
 <footer>
   <div>
     <div class="footer-logo">KA'AX <span>CREACIÓN</span></div>
-    <div class="footer-maya">Ka'ax — « forêt · bois » en maya</div>
+    <div class="footer-maya">Ka'ax — «bosque · madera» en maya</div>
     <p class="footer-desc">Carpintería europea de lujo a medida, fabricada en Playa del Carmen. Formado por los Compagnons du Tour de France — Major de promoción 2023.</p>
   </div>
   <div class="footer-col"><h4>Servicios</h4><ul>
@@ -931,19 +915,6 @@
     <li><a href="/blog/tendencias-2026-cocinas-lujo-riviera-maya.html" style="color:inherit;text-decoration:none">Tendencias 2026</a></li>
   </ul></div>
   <div class="footer-col"><h4>Contacto</h4><ul>
-    <div class="lang-sw" style="position:relative;margin-left:8px;display:flex;align-items:center">
-      <button onclick="this.nextElementSibling.classList.toggle('lopen')" style="background:none;border:1px solid rgba(201,168,76,.4);color:#C9A84C;font-size:11px;letter-spacing:2px;padding:5px 10px;cursor:pointer;font-family:Inter,sans-serif">ES ▾</button>
-      <div class="lmenu" style="display:none;position:absolute;right:0;top:calc(100% + 6px);background:#111;border:1px solid rgba(201,168,76,.2);z-index:9999;min-width:100px;padding:6px 0">
-        <a href="/" style="color:#C9A84C!important;font-weight:600">ES</a>
-        <a href="/fr/">FR</a>
-        <a href="/en/">EN</a>
-        <a href="/it/">IT</a>
-        <a href="/de/">DE</a>
-        <a href="/ru/">RU</a>
-        <a href="/pt/">PT</a>
-      </div>
-    </div>
-    <style>.lmenu.lopen{display:block!important}.lmenu a{display:block;padding:7px 14px;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(250,247,240,.7);text-decoration:none;font-family:Inter,sans-serif;white-space:nowrap}.lmenu a:hover{color:#C9A84C}</style>
       <li><a href="https://wa.me/529843121942" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">💬 +52 984 312 19 42</a></li>
     <li>Presupuesto gratuito</li>
     <li>Instagram @kaaxcreation</li>
@@ -956,6 +927,17 @@
 </div>
 
 <script>
+  // Lang dropdown — close on outside click
+  document.addEventListener('click', function(e){
+    var wrap = document.querySelector('.lang-select-wrap');
+    var dd = wrap && wrap.querySelector('.lang-dropdown');
+    var btn = wrap && wrap.querySelector('.lang-select-btn');
+    if(wrap && !wrap.contains(e.target) && dd){
+      dd.classList.remove('open');
+      if(btn) btn.classList.remove('open');
+    }
+  });
+
   // Navbar scroll
   window.addEventListener('scroll',()=>{
     document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
