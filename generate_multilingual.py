@@ -41,31 +41,37 @@ NAV_LABELS = {
         "cocinas": "Cuisines", "closets": "Dressings", "realizaciones": "Réalisations",
         "metodo": "Méthode", "nosotros": "À propos", "contacto": "Contact",
         "zona": "Zones", "cta": "Devis gratuit",
+        "logo_sub": "Cuisines &amp; Dressings · Riviera Maya",
     },
     "en": {
         "cocinas": "Kitchens", "closets": "Closets", "realizaciones": "Portfolio",
         "metodo": "Method", "nosotros": "About", "contacto": "Contact",
         "zona": "Areas", "cta": "Free Quote",
+        "logo_sub": "Kitchens &amp; Closets · Riviera Maya",
     },
     "it": {
         "cocinas": "Cucine", "closets": "Cabine Armadio", "realizaciones": "Realizzazioni",
         "metodo": "Metodo", "nosotros": "Chi Siamo", "contacto": "Contatto",
         "zona": "Zone", "cta": "Preventivo Gratuito",
+        "logo_sub": "Cucine &amp; Armadi · Riviera Maya",
     },
     "de": {
         "cocinas": "Küchen", "closets": "Ankleideräume", "realizaciones": "Portfolio",
         "metodo": "Methode", "nosotros": "Über uns", "contacto": "Kontakt",
         "zona": "Gebiete", "cta": "Kostenloses Angebot",
+        "logo_sub": "Küchen &amp; Einbauschränke · Riviera Maya",
     },
     "ru": {
         "cocinas": "Кухни", "closets": "Гардеробные", "realizaciones": "Портфолио",
         "metodo": "Метод", "nosotros": "О нас", "contacto": "Контакт",
         "zona": "Зоны", "cta": "Бесплатный расчёт",
+        "logo_sub": "Кухни &amp; Гардеробные · Riviera Maya",
     },
     "pt": {
         "cocinas": "Cozinhas", "closets": "Closets", "realizaciones": "Realizações",
         "metodo": "Método", "nosotros": "Sobre nós", "contacto": "Contato",
         "zona": "Zonas", "cta": "Orçamento Grátis",
+        "logo_sub": "Cozinhas &amp; Closets · Riviera Maya",
     },
 }
 
@@ -135,7 +141,7 @@ def nav_html_lang(lang, root_prefix, active_page, es_url, page_base_path):
 
     return f"""<nav id="navbar">
   <div class="nav-inner">
-    <a href="{root_prefix}" class="nav-logo">KA'AX <span>CREACIÓN</span></a>
+    <a href="{root_prefix}" class="nav-logo">KA'AX <span>CREACIÓN</span><sub>{lbl["logo_sub"]}</sub></a>
     <ul class="nav-links">
       {nav_item("cocinas-a-medida", lbl["cocinas"], f"cocinas-a-medida/{lang}/")}
       {nav_item("closets-y-vestidores", lbl["closets"], f"closets-y-vestidores/{lang}/")}
