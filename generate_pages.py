@@ -212,23 +212,23 @@ def lang_dropdown(base_path, es_href):
 
 
 def nav_html(root_prefix, active_page=""):
-    """Génère la navigation avec les vrais liens de pages."""
+    """Génère la navigation avec des URLs absolues (toujours navigables quelle que soit la profondeur)."""
     links = [
-        ("cocinas-a-medida/", "Cocinas"),
-        ("closets-y-vestidores/", "Vestidores"),
-        ("realizaciones/", "Realizaciones"),
-        ("zona/", "Zonas"),
-        ("nosotros/", "Nuestro ADN"),
-        ("blog/", "Blog"),
+        ("/cocinas-a-medida/", "Cocinas"),
+        ("/closets-y-vestidores/", "Vestidores"),
+        ("/realizaciones/", "Realizaciones"),
+        ("/zona/", "Zonas"),
+        ("/nosotros/", "Nuestro ADN"),
+        ("/blog/", "Blog"),
     ]
     nav_items = ""
     mobile_items = ""
     for href, label in links:
-        full_href = f"{root_prefix}{href}"
-        is_active = href.rstrip("/") == active_page.rstrip("/")
+        slug = href.strip("/")
+        is_active = slug == active_page.rstrip("/")
         cls = ' class="active"' if is_active else ""
-        nav_items += f'<li><a href="{full_href}"{cls}>{label}</a></li>\n    '
-        mobile_items += f'<a href="{full_href}"{cls}>{label}</a>\n  '
+        nav_items += f'<li><a href="{href}"{cls}>{label}</a></li>\n    '
+        mobile_items += f'<a href="{href}"{cls}>{label}</a>\n  '
 
     base_for_lang = root_prefix
     es_href = f"{root_prefix}."
@@ -285,20 +285,20 @@ def footer_html(root_prefix):
     <p class="footer-desc">Carpintería europea de lujo a medida, fabricada en Playa del Carmen. Formado por los Compagnons du Tour de France — Major de promoción 2023.</p>
   </div>
   <div class="footer-col"><h4>Servicios</h4><ul>
-    <li><a href="{root_prefix}cocinas-a-medida/">Cocinas a medida</a></li>
-    <li><a href="{root_prefix}closets-y-vestidores/">Vestidores &amp; Armarios</a></li>
-    <li><a href="{root_prefix}closets-y-vestidores/">Muebles a medida</a></li>
-    <li><a href="{root_prefix}nosotros/">Nuestro ADN</a></li>
+    <li><a href="/cocinas-a-medida/">Cocinas a medida</a></li>
+    <li><a href="/closets-y-vestidores/">Vestidores &amp; Armarios</a></li>
+    <li><a href="/realizaciones/">Realizaciones</a></li>
+    <li><a href="/nosotros/">Nuestro ADN</a></li>
   </ul></div>
   <div class="footer-col"><h4>Blog</h4><ul>
-    <li><a href="{root_prefix}blog/cocinas-integrales-playa-del-carmen.html">Cocinas Integrales PDC</a></li>
-    <li><a href="{root_prefix}blog/vestidores-a-medida-playa-del-carmen.html">Vestidores a Medida</a></li>
-    <li><a href="{root_prefix}blog/maderas-clima-tropical-riviera-maya.html">Maderas Tropicales</a></li>
-    <li><a href="{root_prefix}blog/tendencias-2026-cocinas-lujo-riviera-maya.html">Tendencias 2026</a></li>
+    <li><a href="/blog/cocinas-integrales-playa-del-carmen.html">Cocinas Integrales PDC</a></li>
+    <li><a href="/blog/vestidores-a-medida-playa-del-carmen.html">Vestidores a Medida</a></li>
+    <li><a href="/blog/maderas-clima-tropical-riviera-maya.html">Maderas Tropicales</a></li>
+    <li><a href="/blog/tendencias-2026-cocinas-lujo-riviera-maya.html">Tendencias 2026</a></li>
   </ul></div>
   <div class="footer-col"><h4>Contacto</h4><ul>
     <li><a href="{WA_URL}" target="_blank" rel="noopener">💬 +52 984 312 19 42</a></li>
-    <li><a href="{root_prefix}contacto/">Presupuesto gratuito</a></li>
+    <li><a href="/contacto/">Presupuesto gratuito</a></li>
     <li>Instagram @kaaxcreation</li>
     <li>YouTube Ka'ax Creación</li>
   </ul></div>
