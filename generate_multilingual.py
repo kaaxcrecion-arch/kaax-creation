@@ -182,7 +182,7 @@ FOOTER_LABELS = {
         "maya": "Ka'ax — «forest · wood» in Maya",
         "desc": "Luxury European custom carpentry, crafted in Playa del Carmen. Trained by the Compagnons du Tour de France — Top of class 2023.",
         "services": "Services", "blog": "Blog", "contact": "Contact",
-        "cocinas": "Custom Kitchens", "closets": "Closets &amp; Wardrobes",
+        "cocinas": "Custom Kitchens", "closets": "Custom Closets",
         "realizaciones": "Portfolio", "nosotros": "Our DNA",
         "devis": "Free Quote", "copy": "Artisan European custom carpentry",
     },
@@ -610,7 +610,7 @@ def content_closets(lang, root_prefix):
     wa = wa_url_lang(lang)
     titles = {
         "fr": ("Dressings &amp; Armoires sur mesure", "Espaces<br><em>dressing sur mesure</em>", "Dressings walk-in et armoires<br><em>de luxe</em>"),
-        "en": ("Custom Closets &amp; Wardrobes", "Custom<br><em>walk-in closets</em>", "Walk-in closets and luxury<br><em>wardrobes</em>"),
+        "en": ("Custom Custom Closets", "Custom<br><em>walk-in closets</em>", "Walk-in closets and<br><em>custom storage</em>"),
         "it": ("Cabine Armadio su Misura", "Cabine armadio<br><em>e armadi su misura</em>", "Walk-in closet e armadi<br><em>di lusso</em>"),
         "de": ("Ankleideräume &amp; Schränke nach Maß", "Maßgefertigte<br><em>Ankleideräume</em>", "Walk-in Ankleideräume und<br><em>Luxusschränke</em>"),
         "ru": ("Гардеробные и шкафы на заказ", "Гардеробные<br><em>на заказ</em>", "Walk-in гардеробные и<br><em>элитные шкафы</em>"),
@@ -620,7 +620,7 @@ def content_closets(lang, root_prefix):
 
     paragraphs = {
         "fr": "Ka'ax Création conçoit et fabrique des dressings et armoires entièrement sur mesure. Walk-in closets spacieux, armoires encastrées optimisées, dressing avec îlot central — chaque solution est pensée pour s'intégrer parfaitement à votre espace et à vos habitudes.",
-        "en": "Ka'ax Creación designs and builds fully custom closets and wardrobes. Spacious walk-in closets, optimized built-in wardrobes, dressing rooms with central island — every solution is designed to fit perfectly in your space and your lifestyle.",
+        "en": "Ka'ax Creación designs and builds fully custom closets. Spacious walk-in closets, optimized built-in closets, dressing rooms with central island — every solution is designed to fit perfectly in your space and your lifestyle.",
         "it": "Ka'ax Creación progetta e realizza cabine armadio e armadi completamente su misura. Walk-in closet spaziosi, armadi a muro ottimizzati, cabine armadio con isola centrale — ogni soluzione è pensata per integrarsi perfettamente nel vostro spazio e nelle vostre abitudini.",
         "de": "Ka'ax Creación entwirft und fertigt vollständig maßgeschneiderte Ankleideräume und Schränke. Geräumige Walk-in-Ankleideräume, optimierte Einbauschränke, Ankleidezimmer mit Mittelinsel — jede Lösung ist perfekt auf Ihren Raum und Ihre Gewohnheiten abgestimmt.",
         "ru": "Ka'ax Creación проектирует и изготавливает гардеробные и шкафы полностью на заказ. Просторные walk-in гардеробные, встроенные шкафы с оптимальным использованием пространства, гардеробные с центральным островом — каждое решение идеально вписывается в ваш интерьер.",
@@ -636,7 +636,7 @@ def content_closets(lang, root_prefix):
         ],
         "en": [
             ("🚶", "Walk-in closets", "Open storage spaces with central island, integrated mirrors and LED lighting — the luxury hotel dressing experience in your home."),
-            ("🗄️", "Built-in wardrobes", "Custom wardrobes that perfectly integrate into your walls, with sliding systems, mirrors and finishes of your choice."),
+            ("🗄️", "Built-in Closets", "Custom closets that perfectly integrate into your walls, with sliding systems, mirrors and finishes of your choice."),
             ("🔆", "Integrated lighting", "LED under the hanging rail, spotlights in drawers, backlit mirror — to get ready in the best possible light."),
             ("💎", "Premium accessories", "Butler valet, velvet jewelry drawers, shoe compartments, bag storage — the details that make the difference."),
         ],
@@ -734,7 +734,7 @@ def content_realizaciones(lang, root_prefix):
             "h2": "Types of<br><em>completed projects</em>",
             "cards": [
                 ("🏖️", "Luxury villas — Riviera Maya", "High-end kitchens with central island, walk-in closets and outdoor furniture in treated wood. Projects in Playa del Carmen, Tulum and Cancún."),
-                ("🏢", "Condos &amp; Penthouses", "Space optimization in luxury apartments. Compact integrated kitchens, built-in wardrobes and smart storage solutions."),
+                ("🏢", "Condos &amp; Penthouses", "Space optimization in luxury apartments. Compact integrated kitchens, built-in closets and smart storage solutions."),
                 ("🏨", "Commercial projects", "Custom furniture for boutique hotels, restaurants and commercial spaces. Luxury quality adapted for heavy use."),
             ],
             "cta_h2": "Your project<br><em>in our portfolio?</em>",
@@ -1166,7 +1166,7 @@ def content_contacto(lang, root_prefix):
             "fname": "First name", "lname": "Last name", "email_lbl": "Email", "phone_lbl": "Phone (WhatsApp)",
             "zone_lbl": "Service area", "zone_default": "Choose your area",
             "project_lbl": "Project type", "project_default": "Project type",
-            "project_opts": ["Custom kitchen", "Walk-in closet", "Custom wardrobe", "Full project (kitchen + closet)", "Other"],
+            "project_opts": ["Custom kitchen", "Walk-in closet", "Custom closet", "Full project (kitchen + closet)", "Other"],
             "msg_lbl": "Describe your project", "submit": "Send request",
             "note": "Response within 24h · Free quote · Technical visit included",
         },
@@ -1651,8 +1651,8 @@ SERVICE_META = {
             "h1_crumb": "Dressings",
         },
         "en": {
-            "title": "Custom Closets &amp; Wardrobes — Riviera Maya | Ka'ax Creación",
-            "desc": "Walk-in closets and custom wardrobes in the Riviera Maya. Built in Playa del Carmen by craftsmen trained in France. Free quote.",
+            "title": "Custom Custom Closets — Riviera Maya | Ka'ax Creación",
+            "desc": "Walk-in closets and custom built-ins in the Riviera Maya. Built in Playa del Carmen by craftsmen trained in France. Free quote.",
             "h1_crumb": "Closets",
         },
         "it": {
