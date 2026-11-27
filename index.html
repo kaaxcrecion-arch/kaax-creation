@@ -39,6 +39,19 @@
   .nav-cta{background:transparent;border:1px solid var(--or);color:var(--or);padding:10px 24px;font-size:11px;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all .3s;font-family:'Inter',sans-serif;text-decoration:none;display:inline-block}
   .nav-cta:hover{background:var(--or);color:var(--noir)}
 
+  /* ═══ HAMBURGER MOBILE ═══ */
+  .nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:38px;height:38px;background:none;border:1px solid rgba(201,168,76,.3);cursor:pointer;padding:8px;flex-shrink:0}
+  .nav-hamburger span{display:block;width:100%;height:1px;background:var(--creme);transition:all .3s}
+  .nav-hamburger.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+  .nav-hamburger.open span:nth-child(2){opacity:0}
+  .nav-hamburger.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+  .nav-mobile-menu{display:none;position:fixed;top:60px;left:0;right:0;background:rgba(13,13,13,.98);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,.2);padding:20px 24px;z-index:99;flex-direction:column;gap:4px}
+  .nav-mobile-menu.open{display:flex}
+  .nav-mobile-menu a{color:var(--creme);text-decoration:none;font-size:13px;letter-spacing:2px;text-transform:uppercase;opacity:.75;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.05);display:block}
+  .nav-mobile-menu a:last-child{border-bottom:none}
+  .nav-mobile-menu a:hover{opacity:1;color:var(--or)}
+  .nav-mobile-cta{margin-top:12px;padding:12px 24px;border:1px solid var(--or);color:var(--or);text-align:center;font-size:11px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;display:block}
+
   /* ═══ LANG SELECT ═══ */
   .lang-select-wrap{position:relative}
   .lang-select-btn{display:flex;align-items:center;gap:8px;background:rgba(250,247,240,.06);border:1px solid rgba(201,168,76,.3);padding:8px 14px;cursor:pointer;font-family:'Inter',sans-serif;font-size:12px;letter-spacing:1px;color:var(--creme);transition:all .3s;min-width:90px;justify-content:space-between}
@@ -201,13 +214,15 @@
     .footer-bottom{padding:20px 30px}
   }
   @media(max-width:768px){
-    nav{padding:14px 16px;gap:8px}
+    nav{padding:12px 16px;gap:8px}
     .nav-links{display:none}
-    .nav-cta{padding:8px 14px;font-size:10px;letter-spacing:1px;white-space:nowrap}
-    .lang-select-btn{padding:7px 10px;min-width:70px}
+    .nav-cta{display:none}
+    .nav-hamburger{display:flex}
+    .lang-select-btn{padding:7px 10px;min-width:60px}
     .lang-select-btn .lang-code{display:none}
     .lang-select-btn .flag{font-size:18px}
     .lang-select-btn .chevron{font-size:8px;margin-left:2px}
+    .lang-dropdown{right:auto;left:0}
     .stats{grid-template-columns:repeat(2,1fr);padding:40px 20px}
     .stat:nth-child(2){border-right:none}
     .stat:nth-child(3){border-right:1px solid rgba(201,168,76,.15)}
@@ -415,7 +430,10 @@
     <li><a href="#adn">Nuestro ADN</a></li>
     <li><a href="blog/">Blog</a></li>
   </ul>
-  <div style="display:flex;align-items:center;gap:12px">
+  <div style="display:flex;align-items:center;gap:10px">
+    <button class="nav-hamburger" id="navHamburger" aria-label="Menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
     <div class="lang-select-wrap">
       <button class="lang-select-btn" onclick="this.nextElementSibling.classList.toggle('open');this.classList.toggle('open')" aria-label="Seleccionar idioma">
         <span class="flag" aria-hidden="true">🇲🇽</span>
@@ -436,6 +454,17 @@
     <a href="https://wa.me/529843121942?text=Hola%20Ka%27ax%20Creaci%C3%B3n%2C%20me%20gustar%C3%ADa%20un%20presupuesto%20gratuito." target="_blank" rel="noopener" class="nav-cta">Presupuesto gratuito</a>
   </div>
 </nav>
+
+<!-- ═══ MOBILE MENU ═══ -->
+<div class="nav-mobile-menu" id="navMobileMenu" role="navigation" aria-label="Menú móvil">
+  <a href="#services">Cocinas</a>
+  <a href="#services">Vestidores</a>
+  <a href="#portfolio">Realizaciones</a>
+  <a href="#zonas">Zonas</a>
+  <a href="#adn">Nuestro ADN</a>
+  <a href="blog/">Blog</a>
+  <a href="https://wa.me/529843121942?text=Hola%20Ka%27ax%20Creaci%C3%B3n%2C%20me%20gustar%C3%ADa%20un%20presupuesto%20gratuito." target="_blank" rel="noopener" class="nav-mobile-cta">Presupuesto gratuito</a>
+</div>
 
 <!-- ═══ HERO ═══ -->
 <section class="hero" aria-label="Ka'ax Creación — Carpintería europea de lujo en la Riviera Maya">
@@ -1013,6 +1042,36 @@
       langBtn.focus();
     }
   });
+</script>
+<script>
+  // ═══ HAMBURGER MENU MOBILE ═══
+  (function(){
+    var btn = document.getElementById('navHamburger');
+    var menu = document.getElementById('navMobileMenu');
+    if(!btn || !menu) return;
+    btn.addEventListener('click', function(e){
+      e.stopPropagation();
+      var open = menu.classList.toggle('open');
+      btn.classList.toggle('open', open);
+      btn.setAttribute('aria-expanded', open);
+    });
+    // Fermer au clic sur un lien du menu
+    menu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        menu.classList.remove('open');
+        btn.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    });
+    // Fermer au clic extérieur
+    document.addEventListener('click', function(e){
+      if(!menu.contains(e.target) && e.target !== btn){
+        menu.classList.remove('open');
+        btn.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  })();
 </script>
 </body>
 </html>
