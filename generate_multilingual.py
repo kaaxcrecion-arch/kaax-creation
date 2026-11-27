@@ -140,6 +140,7 @@ def nav_html_lang(lang, root_prefix, active_page, es_url, page_base_path):
       {nav_item("cocinas-a-medida", lbl["cocinas"], f"cocinas-a-medida/{lang}/")}
       {nav_item("closets-y-vestidores", lbl["closets"], f"closets-y-vestidores/{lang}/")}
       {nav_item("realizaciones", lbl["realizaciones"], f"realizaciones/{lang}/")}
+      {nav_item("zona", lbl["zona"], f"zona/{lang}/")}
       {nav_item("metodo", lbl["metodo"], f"metodo/{lang}/")}
       {nav_item("nosotros", lbl["nosotros"], f"nosotros/{lang}/")}
       {nav_item("contacto", lbl["contacto"], f"contacto/{lang}/")}
@@ -157,6 +158,7 @@ def nav_html_lang(lang, root_prefix, active_page, es_url, page_base_path):
       <li><a href="{root_prefix}cocinas-a-medida/{lang}/">{lbl["cocinas"]}</a></li>
       <li><a href="{root_prefix}closets-y-vestidores/{lang}/">{lbl["closets"]}</a></li>
       <li><a href="{root_prefix}realizaciones/{lang}/">{lbl["realizaciones"]}</a></li>
+      <li><a href="{root_prefix}zona/{lang}/">{lbl["zona"]}</a></li>
       <li><a href="{root_prefix}metodo/{lang}/">{lbl["metodo"]}</a></li>
       <li><a href="{root_prefix}nosotros/{lang}/">{lbl["nosotros"]}</a></li>
       <li><a href="{root_prefix}contacto/{lang}/">{lbl["contacto"]}</a></li>
