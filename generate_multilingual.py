@@ -275,6 +275,14 @@ def build_page_lang(lang, title, description, canonical, breadcrumbs_html, conte
     footer = footer_html_lang(lang, root_prefix)
     ticker = ticker_html()
 
+    # Inject ticker after page-hero (after h1+lead text, before the first content section)
+    hero_pos = content.find('class="page-hero')
+    if hero_pos >= 0:
+        close_div = content.find('</div>', hero_pos)
+        if close_div >= 0:
+            content = content[:close_div+6] + f'\n{ticker}\n' + content[close_div+6:]
+            ticker = ""  # already injected inside content
+
     return f"""<!DOCTYPE html>
 <html lang="{lm["html_lang"]}">
 <head>
@@ -297,8 +305,6 @@ def build_page_lang(lang, title, description, canonical, breadcrumbs_html, conte
 <body>
 
 {nav}
-
-{ticker}
 
 <div style="position:fixed;inset:0;{hero_bg_style};z-index:-1"></div>
 
