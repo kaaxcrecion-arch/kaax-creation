@@ -201,10 +201,13 @@
     .footer-bottom{padding:20px 30px}
   }
   @media(max-width:768px){
-    nav{padding:14px 20px}
+    nav{padding:14px 16px;gap:8px}
     .nav-links{display:none}
-    .nav-cta{display:none}
-    .lang-select-wrap{display:none}
+    .nav-cta{padding:8px 14px;font-size:10px;letter-spacing:1px;white-space:nowrap}
+    .lang-select-btn{padding:7px 10px;min-width:70px}
+    .lang-select-btn .lang-code{display:none}
+    .lang-select-btn .flag{font-size:18px}
+    .lang-select-btn .chevron{font-size:8px;margin-left:2px}
     .stats{grid-template-columns:repeat(2,1fr);padding:40px 20px}
     .stat:nth-child(2){border-right:none}
     .stat:nth-child(3){border-right:1px solid rgba(201,168,76,.15)}
