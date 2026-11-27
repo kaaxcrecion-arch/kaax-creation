@@ -1282,7 +1282,7 @@ def content_contacto(lang, root_prefix):
     <div>
       <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(24px,2.5vw,32px);font-weight:300;margin-bottom:24px">{d["form_h"]}</h2>
       <form action="https://formspree.io/f/xwpkqeoj" method="POST" style="display:flex;flex-direction:column;gap:16px">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+        <div class="name-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
           <input type="text" name="prenom" placeholder="{d["fname"]}" required style="padding:14px 16px;background:rgba(255,255,255,.05);border:1px solid rgba(201,168,76,.3);color:#fff;font-family:Inter,sans-serif;font-size:14px;border-radius:0;outline:none">
           <input type="text" name="nom" placeholder="{d["lname"]}" required style="padding:14px 16px;background:rgba(255,255,255,.05);border:1px solid rgba(201,168,76,.3);color:#fff;font-family:Inter,sans-serif;font-size:14px;border-radius:0;outline:none">
         </div>
@@ -1298,7 +1298,7 @@ def content_contacto(lang, root_prefix):
         </select>
         <textarea name="message" placeholder="{d["msg_lbl"]}" rows="4" required style="padding:14px 16px;background:rgba(255,255,255,.05);border:1px solid rgba(201,168,76,.3);color:#fff;font-family:Inter,sans-serif;font-size:14px;border-radius:0;outline:none;resize:vertical"></textarea>
         <input type="hidden" name="_language" value="{lang}">
-        <button type="submit" style="padding:16px 32px;background:var(--or);color:#0D0D0D;font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:600;letter-spacing:1px;border:none;cursor:pointer;text-transform:uppercase">{d["submit"]}</button>
+        <button type="submit" style="padding:16px 32px;background:var(--or);color:#0D0D0D;font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:600;letter-spacing:1px;border:none;cursor:pointer;text-transform:uppercase;width:100%">{d["submit"]}</button>
         <p style="font-size:12px;opacity:.5;text-align:center">{d["note"]}</p>
       </form>
     </div>

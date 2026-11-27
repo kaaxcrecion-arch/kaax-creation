@@ -186,6 +186,10 @@
     .footer-bottom{padding:16px 20px;flex-direction:column;gap:6px;text-align:center}
     .cta-section{padding:60px 20px}.cta-buttons{flex-direction:column;align-items:center}
     .contact-grid{grid-template-columns:1fr;gap:48px}
+    .name-grid{grid-template-columns:1fr!important}
+    .process-step{flex-direction:column;gap:8px;padding:24px 0}
+    .step-num{font-size:36px;width:auto;line-height:1;margin-bottom:4px}
+    .step-content h3{font-size:18px}
   }
   @media(max-width:768px){.ticker-track{animation-duration:14s}}
 </style>
@@ -268,7 +272,7 @@
     <div>
       <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(24px,2.5vw,32px);font-weight:300;margin-bottom:24px">Formulário de pedido</h2>
       <form action="https://formspree.io/f/xwpkqeoj" method="POST" style="display:flex;flex-direction:column;gap:16px">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+        <div class="name-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
           <input type="text" name="prenom" placeholder="Nome" required style="padding:14px 16px;background:rgba(255,255,255,.05);border:1px solid rgba(201,168,76,.3);color:#fff;font-family:Inter,sans-serif;font-size:14px;border-radius:0;outline:none">
           <input type="text" name="nom" placeholder="Apelido" required style="padding:14px 16px;background:rgba(255,255,255,.05);border:1px solid rgba(201,168,76,.3);color:#fff;font-family:Inter,sans-serif;font-size:14px;border-radius:0;outline:none">
         </div>
@@ -301,7 +305,7 @@
         </select>
         <textarea name="message" placeholder="Descreva o seu projeto" rows="4" required style="padding:14px 16px;background:rgba(255,255,255,.05);border:1px solid rgba(201,168,76,.3);color:#fff;font-family:Inter,sans-serif;font-size:14px;border-radius:0;outline:none;resize:vertical"></textarea>
         <input type="hidden" name="_language" value="pt">
-        <button type="submit" style="padding:16px 32px;background:var(--or);color:#0D0D0D;font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:600;letter-spacing:1px;border:none;cursor:pointer;text-transform:uppercase">Enviar pedido</button>
+        <button type="submit" style="padding:16px 32px;background:var(--or);color:#0D0D0D;font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:600;letter-spacing:1px;border:none;cursor:pointer;text-transform:uppercase;width:100%">Enviar pedido</button>
         <p style="font-size:12px;opacity:.5;text-align:center">Resposta em 24h · Orçamento grátis · Visita técnica incluída</p>
       </form>
     </div>
