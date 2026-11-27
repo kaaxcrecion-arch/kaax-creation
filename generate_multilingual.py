@@ -1273,7 +1273,7 @@ def content_contacto(lang, root_prefix):
 </div>
 <div class="content-section reveal">
   <div class="gold-divider"></div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;max-width:1100px;margin:0 auto">
+  <div class="contact-grid">
     <div>
       <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(28px,3vw,38px);font-weight:300;margin-bottom:16px">{d["wa_h"]}</h2>
       <p style="font-size:15px;line-height:1.9;opacity:.75;margin-bottom:32px">{d["wa_p"]}</p>
