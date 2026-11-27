@@ -174,7 +174,7 @@
   /* ═══ LANGUES ═══ */
   .languages{padding:80px 60px;background:var(--gris-clair)}
   .lang-grid{display:flex;justify-content:center;gap:40px;flex-wrap:wrap;margin-top:48px}
-  .lang-item{display:flex;flex-direction:column;align-items:center;gap:10px;padding:20px 28px;border:1px solid rgba(201,168,76,.2);transition:all .3s;cursor:default}
+  .lang-item{display:flex;flex-direction:column;align-items:center;gap:10px;padding:20px 28px;border:1px solid rgba(201,168,76,.2);transition:all .3s;cursor:pointer;text-decoration:none;color:inherit}
   .lang-item:hover{border-color:var(--or);background:rgba(201,168,76,.05)}
   .lang-flag{font-size:28px}.lang-name{font-size:11px;letter-spacing:2px;text-transform:uppercase;opacity:.7}.lang-badge{font-size:10px;color:var(--or);letter-spacing:1px}
 
@@ -695,13 +695,13 @@
     <p class="section-sub">Наша команда принимает клиентов всех национальностей, проживающих в Ривьера Майя и по всей Мексике</p>
   </div>
   <div class="lang-grid reveal">
-    <div class="lang-item"><div class="lang-flag" aria-hidden="true">🇲🇽</div><div class="lang-name">Español</div><div class="lang-badge">Principal</div></div>
-    <div class="lang-item"><div class="lang-flag" aria-hidden="true">🇺🇸</div><div class="lang-name">English</div><div class="lang-badge">Fase 1</div></div>
-    <div class="lang-item"><div class="lang-flag" aria-hidden="true">🇫🇷</div><div class="lang-name">Français</div><div class="lang-badge">Fase 1</div></div>
-    <div class="lang-item"><div class="lang-flag" aria-hidden="true">🇮🇹</div><div class="lang-name">Italiano</div><div class="lang-badge">Fase 2</div></div>
-    <div class="lang-item"><div class="lang-flag" aria-hidden="true">🇩🇪</div><div class="lang-name">Deutsch</div><div class="lang-badge">Fase 2</div></div>
-    <div class="lang-item"><div class="lang-flag" aria-hidden="true">🇷🇺</div><div class="lang-name">Русский</div><div class="lang-badge">Fase 3</div></div>
-    <div class="lang-item"><div class="lang-flag" aria-hidden="true">🇵🇹</div><div class="lang-name">Português</div><div class="lang-badge">Fase 3</div></div>
+    <a href="/" class="lang-item"><div class="lang-flag" aria-hidden="true" style="display:inline-flex;align-items:center;border:1px solid rgba(255,255,255,.15);border-radius:1px;overflow:hidden;width:36px;height:24px"><span style="display:inline-block;width:12px;height:24px;background:#006847"></span><span style="display:inline-block;width:12px;height:24px;background:#fff"></span><span style="display:inline-block;width:12px;height:24px;background:#CE1126"></span></div><div class="lang-name">Español</div></a>
+    <a href="/en/" class="lang-item"><div class="lang-flag" aria-hidden="true" style="display:inline-flex;align-items:center;border:1px solid rgba(255,255,255,.15);border-radius:1px;overflow:hidden;width:36px;height:24px"><span style="display:inline-block;width:12px;height:24px;background:#B22234"></span><span style="display:inline-block;width:12px;height:24px;background:#fff"></span><span style="display:inline-block;width:12px;height:24px;background:#3C3B6E"></span></div><div class="lang-name">English</div></a>
+    <a href="/fr/" class="lang-item"><div class="lang-flag" aria-hidden="true" style="display:inline-flex;align-items:center;border:1px solid rgba(255,255,255,.15);border-radius:1px;overflow:hidden;width:36px;height:24px"><span style="display:inline-block;width:12px;height:24px;background:#002395"></span><span style="display:inline-block;width:12px;height:24px;background:#fff"></span><span style="display:inline-block;width:12px;height:24px;background:#ED2939"></span></div><div class="lang-name">Français</div></a>
+    <a href="/it/" class="lang-item"><div class="lang-flag" aria-hidden="true" style="display:inline-flex;align-items:center;border:1px solid rgba(255,255,255,.15);border-radius:1px;overflow:hidden;width:36px;height:24px"><span style="display:inline-block;width:12px;height:24px;background:#009246"></span><span style="display:inline-block;width:12px;height:24px;background:#fff"></span><span style="display:inline-block;width:12px;height:24px;background:#CE2B37"></span></div><div class="lang-name">Italiano</div></a>
+    <a href="/de/" class="lang-item"><div class="lang-flag" aria-hidden="true" style="display:inline-flex;flex-direction:column;border:1px solid rgba(255,255,255,.15);border-radius:1px;overflow:hidden;width:36px;height:24px"><span style="display:block;width:36px;height:8px;background:#000"></span><span style="display:block;width:36px;height:8px;background:#D00"></span><span style="display:block;width:36px;height:8px;background:#FFCE00"></span></div><div class="lang-name">Deutsch</div></a>
+    <a href="/ru/" class="lang-item"><div class="lang-flag" aria-hidden="true" style="display:inline-flex;flex-direction:column;border:1px solid rgba(255,255,255,.15);border-radius:1px;overflow:hidden;width:36px;height:24px"><span style="display:block;width:36px;height:8px;background:#fff"></span><span style="display:block;width:36px;height:8px;background:#1C3578"></span><span style="display:block;width:36px;height:8px;background:#E4181C"></span></div><div class="lang-name">Русский</div></a>
+    <a href="/pt/" class="lang-item"><div class="lang-flag" aria-hidden="true" style="display:inline-flex;align-items:center;border:1px solid rgba(255,255,255,.15);border-radius:1px;overflow:hidden;width:36px;height:24px"><span style="display:inline-block;width:12px;height:24px;background:#006600"></span><span style="display:inline-block;width:12px;height:24px;background:#FF0000"></span><span style="display:inline-block;width:12px;height:24px;background:#FFD700"></span></div><div class="lang-name">Português</div></a>
   </div>
 </section>
 
