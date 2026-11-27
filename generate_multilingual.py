@@ -1031,7 +1031,7 @@ def content_nosotros(lang, root_prefix):
         "fr": {
             "eyebrow": "Notre histoire — Ka'ax Création",
             "h1": "Notre<br><em>ADN</em>",
-            "lead": "Ka'ax Création est née de la passion d'un artisan français pour le bois et les matériaux nobles, installé au cœur de la Riviera Maya. Un atelier artisanal au service des plus belles résidences de la région.",
+            "lead": "Ka'ax Création conçoit et fabrique cuisines et dressings de style européen au cœur de la Riviera Maya. L'excellence artisanale des Compagnons du Tour de France, au service des plus belles résidences de la région.",
             "story_h": "Deux fondateurs,<br><em>une vision commune</em>",
             "story_p": "Stéphane, expert en marketing digital et stratégie commerciale, et Raphaël, Major de promotion 2023 des Compagnons du Tour de France, ont uni leurs compétences pour créer Ka'ax Creación. L'un maîtrise les marchés internationaux et la clientèle d'exception, l'autre perpétue une tradition artisanale vieille de plusieurs siècles. Ensemble, ils ont fondé l'atelier de menuiserie d'exception de la Riviera Maya.",
             "vals": [
@@ -1046,7 +1046,7 @@ def content_nosotros(lang, root_prefix):
         "en": {
             "eyebrow": "Our story — Ka'ax Creación",
             "h1": "Our<br><em>DNA</em>",
-            "lead": "Ka'ax Creación was born from a French craftsman's passion for wood and noble materials, settled in the heart of the Riviera Maya. An artisan workshop serving the finest residences in the region.",
+            "lead": "Ka'ax Creación designs and builds European-style kitchens and closets in the heart of the Riviera Maya. Compagnons du Tour de France craftsmanship serving the finest residences in the region.",
             "story_h": "Two founders,<br><em>one shared vision</em>",
             "story_p": "Stéphane, expert in digital marketing and commercial strategy, and Raphaël, Top Graduate 2023 of the Compagnons du Tour de France, combined their skills to create Ka'ax Creación. One masters international markets and exceptional clientele, the other perpetuates a centuries-old artisan tradition. Together, they founded the finest custom carpentry workshop in the Riviera Maya.",
             "vals": [
@@ -1061,7 +1061,7 @@ def content_nosotros(lang, root_prefix):
         "it": {
             "eyebrow": "La nostra storia — Ka'ax Creación",
             "h1": "Il nostro<br><em>DNA</em>",
-            "lead": "Ka'ax Creación nasce dalla passione di un artigiano francese per il legno e i materiali nobili, insediato nel cuore della Riviera Maya. Un laboratorio artigianale al servizio delle più belle residenze della regione.",
+            "lead": "Ka'ax Creación progetta e realizza cucine e cabine armadio in stile europeo nel cuore della Riviera Maya. Il know-how dei Compagnons du Tour de France al servizio delle più belle residenze della regione.",
             "story_h": "Due fondatori,<br><em>una visione comune</em>",
             "story_p": "Stéphane, esperto di marketing digitale e strategia commerciale, e Raphaël, Primo della promozione 2023 dei Compagnons du Tour de France, hanno unito le loro competenze per creare Ka'ax Creación. L'uno padroneggia i mercati internazionali e la clientela d'eccezione, l'altro perpetua una tradizione artigianale secolare. Insieme hanno fondato il laboratorio di falegnameria d'eccellenza della Riviera Maya.",
             "vals": [
@@ -1076,7 +1076,7 @@ def content_nosotros(lang, root_prefix):
         "de": {
             "eyebrow": "Unsere Geschichte — Ka'ax Creación",
             "h1": "Unsere<br><em>DNA</em>",
-            "lead": "Ka'ax Creación entstand aus der Leidenschaft eines französischen Handwerkers für Holz und edle Materialien, der sich im Herzen der Riviera Maya niedergelassen hat. Eine Handwerkswerkstatt im Dienst der schönsten Residenzen der Region.",
+            "lead": "Ka'ax Creación entwirft und fertigt Küchen und Ankleideräume im europäischen Stil im Herzen der Riviera Maya. Das Handwerk der Compagnons du Tour de France im Dienst der schönsten Residenzen der Region.",
             "story_h": "Zwei Gründer,<br><em>eine gemeinsame Vision</em>",
             "story_p": "Stéphane, Experte für digitales Marketing und Handelsstrategie, und Raphaël, Jahrgangsbester 2023 der Compagnons du Tour de France, haben ihre Kompetenzen vereint, um Ka'ax Creación zu gründen. Einer beherrscht internationale Märkte und anspruchsvolle Kundschaft, der andere pflegt eine jahrhundertealte Handwerkstradition. Gemeinsam gründeten sie die feinste Schreinerwerkstatt der Riviera Maya.",
             "vals": [
@@ -1091,7 +1091,7 @@ def content_nosotros(lang, root_prefix):
         "ru": {
             "eyebrow": "Наша история — Ka'ax Creación",
             "h1": "Наша<br><em>ДНК</em>",
-            "lead": "Ka'ax Creación родилась из страсти французского мастера к дереву и благородным материалам, обосновавшегося в самом сердце Ривьеры Майя. Ремесленная мастерская на службе лучших резиденций региона.",
+            "lead": "Ka'ax Creación проектирует и изготавливает кухни и гардеробные в европейском стиле в сердце Ривьеры Майя. Мастерство Compagnons du Tour de France на службе лучших резиденций региона.",
             "story_h": "Два основателя,<br><em>общее видение</em>",
             "story_p": "Стефан, эксперт по цифровому маркетингу и коммерческой стратегии, и Рафаэль, лучший выпускник 2023 года гильдии Compagnons du Tour de France, объединили свои навыки для создания Ka'ax Creación. Один осваивает международные рынки и взыскательную клиентуру, другой продолжает многовековую ремесленную традицию. Вместе они основали лучшую столярную мастерскую Ривьеры Майя.",
             "vals": [
@@ -1106,7 +1106,7 @@ def content_nosotros(lang, root_prefix):
         "pt": {
             "eyebrow": "Nossa história — Ka'ax Creación",
             "h1": "Nosso<br><em>DNA</em>",
-            "lead": "Ka'ax Creación nasceu da paixão de um artesão francês pela madeira e materiais nobres, instalado no coração da Riviera Maya. Uma oficina artesanal ao serviço das mais belas residências da região.",
+            "lead": "Ka'ax Creación concebe e fabrica cozinhas e closets de estilo europeu no coração da Riviera Maya. O saber-fazer dos Compagnons du Tour de France ao serviço das mais belas residências da região.",
             "story_h": "Dois fundadores,<br><em>uma visão comum</em>",
             "story_p": "Stéphane, especialista em marketing digital e estratégia comercial, e Raphaël, Melhor Aluno de 2023 dos Compagnons du Tour de France, uniram as suas competências para criar a Ka'ax Creación. Um domina os mercados internacionais e a clientela de exceção, o outro perpetua uma tradição artesanal de séculos. Juntos fundaram a mais fina oficina de marcenaria da Riviera Maya.",
             "vals": [
@@ -1756,33 +1756,33 @@ SERVICE_META = {
     },
     "nosotros": {
         "fr": {
-            "title": "Notre Histoire — Ka'ax Création | Menuiserie Riviera Maya",
-            "desc": "Ka'ax Création : artisan menuisier formé par les Compagnons du Tour de France, installé à Playa del Carmen. L'excellence artisanale européenne au cœur de la Riviera Maya.",
+            "title": "Notre Histoire — Ka'ax Création | Cuisines & Dressings Riviera Maya",
+            "desc": "Ka'ax Création : spécialiste cuisines et dressings de style européen à Playa del Carmen. Savoir-faire des Compagnons du Tour de France — devis gratuit.",
             "h1_crumb": "À propos",
         },
         "en": {
-            "title": "Our Story — Ka'ax Creación | Riviera Maya Carpentry",
-            "desc": "Ka'ax Creación: master craftsman trained by the Compagnons du Tour de France, based in Playa del Carmen. European artisan excellence in the heart of the Riviera Maya.",
+            "title": "Our Story — Ka'ax Creación | Kitchens & Closets Riviera Maya",
+            "desc": "Ka'ax Creación: specialist in European-style custom kitchens and closets in Playa del Carmen. Compagnons du Tour de France craftsmanship — free quote.",
             "h1_crumb": "About",
         },
         "it": {
-            "title": "La Nostra Storia — Ka'ax Creación | Falegnameria Riviera Maya",
-            "desc": "Ka'ax Creación: falegname maestro formato dai Compagnons du Tour de France, con sede a Playa del Carmen. L'eccellenza artigianale europea nel cuore della Riviera Maya.",
+            "title": "La Nostra Storia — Ka'ax Creación | Cucine & Cabine Armadio Riviera Maya",
+            "desc": "Ka'ax Creación: specialista in cucine e cabine armadio in stile europeo a Playa del Carmen. Know-how dei Compagnons du Tour de France — preventivo gratuito.",
             "h1_crumb": "Chi Siamo",
         },
         "de": {
-            "title": "Unsere Geschichte — Ka'ax Creación | Schreinerei Riviera Maya",
-            "desc": "Ka'ax Creación: Meisterschreiner ausgebildet von den Compagnons du Tour de France, in Playa del Carmen ansässig. Europäische Handwerksexzellenz im Herzen der Riviera Maya.",
+            "title": "Unsere Geschichte — Ka'ax Creación | Küchen & Ankleideräume Riviera Maya",
+            "desc": "Ka'ax Creación: Spezialist für Küchen und Ankleideräume im europäischen Stil in Playa del Carmen. Handwerk der Compagnons du Tour de France — kostenloses Angebot.",
             "h1_crumb": "Über uns",
         },
         "ru": {
-            "title": "Наша история — Ka'ax Creación | Столярная мастерская Ривьера Майя",
-            "desc": "Ka'ax Creación: мастер-столяр, обученный Compagnons du Tour de France, обосновавшийся в Плая-дель-Кармен. Европейское ремесленное совершенство в сердце Ривьеры Майя.",
+            "title": "Наша история — Ka'ax Creación | Кухни и гардеробные Ривьера Майя",
+            "desc": "Ka'ax Creación: специалист по кухням и гардеробным в европейском стиле в Плая-дель-Кармен. Мастерство Compagnons du Tour de France — бесплатный расчёт.",
             "h1_crumb": "О нас",
         },
         "pt": {
-            "title": "A Nossa História — Ka'ax Creación | Marcenaria Riviera Maya",
-            "desc": "Ka'ax Creación: mestre marceneiro formado pelos Compagnons du Tour de France, sediado em Playa del Carmen. Excelência artesanal europeia no coração da Riviera Maya.",
+            "title": "A Nossa História — Ka'ax Creación | Cozinhas & Closets Riviera Maya",
+            "desc": "Ka'ax Creación: especialista em cozinhas e closets de estilo europeu em Playa del Carmen. Saber-fazer dos Compagnons du Tour de France — orçamento grátis.",
             "h1_crumb": "Sobre nós",
         },
     },

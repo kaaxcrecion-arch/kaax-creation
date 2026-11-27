@@ -902,7 +902,7 @@ def page_nosotros():
   "@type": "AboutPage",
   "@id": "https://kaaxcreacion.com/nosotros/#page",
   "name": "Nosotros — Ka'ax Creación",
-  "description": "Ka'ax Creación: taller de carpintería europea de lujo en Playa del Carmen, fundado por artesanos formados por los Compagnons du Tour de France.",
+  "description": "Ka'ax Creación: especialistas en cocinas y closets de estilo europeo en Playa del Carmen. Fabricados a medida por artesanos Compagnons du Tour de France.",
   "url": "https://kaaxcreacion.com/nosotros/",
   "mainEntity": {
     "@type": "HomeAndConstructionBusiness",
@@ -1001,7 +1001,7 @@ def page_nosotros():
 """
     return build_page(
         title="Nuestro ADN — Ka'ax Creación | Compagnons du Tour de France",
-        description="Ka'ax Creación: carpintería europea de lujo en Playa del Carmen. Fundada por Raphaël, Major de Promoción 2023 de los Compagnons du Tour de France.",
+        description="Ka'ax Creación: cocinas y closets a medida de estilo europeo en Playa del Carmen. Fundada por Raphaël, Major 2023 de los Compagnons du Tour de France.",
         canonical=f"{DOMAIN}/nosotros/",
         breadcrumbs=crumb,
         content=content,
