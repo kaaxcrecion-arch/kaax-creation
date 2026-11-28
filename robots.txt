@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kaaxcreacion.com/sitemap.xml
+
+# AI crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+User-agent: Googlebot
+Allow: /
